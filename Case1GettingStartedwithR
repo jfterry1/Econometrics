@@ -1,0 +1,100 @@
+#Minutes in March
+days_in_march <- 31
+hours_in_day <- 24
+minutes_in_hour <- 60
+minutes_in_day <- hours_in_day * minutes_in_hour
+minutes_in_march <- minutes_in_day * days_in_march
+cat("Minutes in March:", minutes_in_march)
+
+#Sum
+cat("Sum:", sum(4, 1, 2, 4, 6, 9, 6, 10))
+
+#Summary Help and Iris
+?summary
+data(iris)
+summary(iris)
+
+#War Eagle
+phrase <- "War Damn Eagle"
+for (i in 1:10) {
+  cat(i, ":", phrase, "\n")
+  
+}
+
+#Vector X
+x <- seq(-2,2, by = 0.1)
+print(x)
+
+#Two Vectors
+wizards <- c("Henry", "Reese", "Fred", "Jesse", "Sirius")
+ranking <- c(1, 4, 5, 6, 1)
+print(wizards [4])
+
+#Names
+wizards <- c("Henry", "Reese", "Fred", "Jesse", "Sirius")
+names_wizards <- c("A", "B", "C", "D", "E")
+names(wizards) <- names_wizards
+print(wizards["B"])
+
+#Change to K
+names(wizards)[5] <- "K"
+print(wizards["K"])
+
+#Mike
+years <- c(1998, 1999, 2000, 2001)
+income <- c(65000, 67000, 70000, 72000)
+expenses <- c(45000, 47000, 50000, 55000)
+
+savings <- income - expenses
+print(savings)
+
+sum <- sum(savings)
+print(sum)
+
+#Y
+y <- seq(210,40, by = -1.0)
+#print(y)
+
+y[91] <- 2
+print(y)
+
+#Midterms
+scores <- c(60, 75, 45, 20, 80)
+avg_score <- mean(scores)
+cat("Mean:", avg_score)
+cat("Median:", median(scores))
+cat("Range:", range(scores))
+
+#Three Vectors
+v_age <- c(18, 22, 45, 20, 140, 145, 145)
+v_person <- c("Achilles", "Hector", "Priam", "Paris", "Apollo", "Athena", "Aphrodite")
+v_description <- c("Agressive", "Loyal", "Regal", "Cowardly", "Proud", "Wise", "Conniving")
+library(data.table)
+trojan.war <- data.table(Person = v_person, Age = v_age, Description = v_description)
+print(trojan.war$Description)
+
+#x3
+x <- seq(-2, 2, length.out = 10000)  
+y <- x^3
+plot(x, y, type = "l", col = "blue", xlab = "x", ylab = "x^3", main = "Plot of x^3")
+
+#Logx
+x <- seq(0.5, 1.5, length.out = 1000)
+y <- log(x)
+plot(x, y, type = "l", col = "red", xlab = "x", ylab = "log(x)", main = "Plot of log(x)")
+
+#sinx
+x <- seq(0, 6*pi, length.out = 1000)
+y <- sin(x)
+plot(x, y, type = "l", col = "green", xlab = "x", ylab = "sin(x)", main = "Plot of sin(x)")
+
+#overlaid
+x <- seq(0, 2 * pi, length.out = 100)
+y_sin <- sin(x)
+y_cos <- cos(x)
+y_2sin_plus_pi4 <- 2 * sin(x + pi/4)
+plot(x, y_sin, type = "l", col = "blue", xlab = "x", ylab = "y", main = "Trigonometric Functions")
+lines(x, y_cos, col = "red")
+lines(x, y_2sin_plus_pi4, col = "green")
+legend("topright", legend = c("sin(x)", "cos(x)", "2*sin(x + π/4)"), col = c("blue", "red", "green"), lty = 1)
+
